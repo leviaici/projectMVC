@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{EBCD5E78-F222-4207-934C-BA501518EC9F}|https">
+  <MonoDevelop.Ide.Workbench ActiveDocument="incercareProiect/Controllers/HelloWorldController.cs">
+    <Files>
+      <File FileName="incercareProiect/Controllers/HelloWorldController.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="incercareProiect" expanded="True">
+            <Node name="incercareProiect" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="HelloWorldController.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.incercareProiect PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+</Properties>
