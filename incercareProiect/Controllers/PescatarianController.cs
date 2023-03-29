@@ -83,8 +83,13 @@ namespace incercareProiect.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Type,Price,Rating")] Pescatarian pescatarian)
+        public async Task<IActionResult> Create([Bind("Id,Name,Type,Price,Rating")] Pescatarian pescatarian, String PasswordString)
         {
+            if (PasswordString != "admin")
+            {
+                return NotFound();
+            }
+
             if (ModelState.IsValid)
             {
                 _context.Add(pescatarian);
@@ -115,8 +120,13 @@ namespace incercareProiect.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Type,Price,Rating")] Pescatarian pescatarian)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Type,Price,Rating")] Pescatarian pescatarian, String PasswordString)
         {
+            if (PasswordString != "admin")
+            {
+                return NotFound();
+            }
+
             if (id != pescatarian.Id)
             {
                 return NotFound();

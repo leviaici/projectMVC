@@ -83,8 +83,13 @@ namespace incercareProiect.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Type,Price,Rating")] Vegan vegan)
+        public async Task<IActionResult> Create([Bind("Id,Name,Type,Price,Rating")] Vegan vegan, String PasswordString)
         {
+            if (PasswordString != "admin")
+            {
+                return NotFound();
+            }
+
             if (ModelState.IsValid)
             {
                 _context.Add(vegan);
@@ -115,8 +120,13 @@ namespace incercareProiect.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Type,Price,Rating")] Vegan vegan)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Type,Price,Rating")] Vegan vegan, String PasswordString)
         {
+            if (PasswordString != "admin")
+            {
+                return NotFound();
+            }
+
             if (id != vegan.Id)
             {
                 return NotFound();
@@ -147,7 +157,7 @@ namespace incercareProiect.Controllers
 
         // GET: Vegan/Delete/5
         public async Task<IActionResult> Delete(int? id)
-        {
+        { 
             if (id == null || _context.Vegan == null)
             {
                 return NotFound();
