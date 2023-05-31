@@ -24,4 +24,3 @@ namespace incercareProiect.Models
         public string? Rating { get; set; }
     }
 }
-
